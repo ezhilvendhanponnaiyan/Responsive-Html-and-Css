@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-very-dark-blue: #191627;
+  --clr-text-color: #6666cc;
+  --clr-white: #fff;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-image: url(./image/3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+}
+
+.navBar {
+  position: relative;
+  height: 100%;
+  max-width: 63rem;
+  width: 100%;
+  background-color: var(--first-color);
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBarList {
+  display: flex;
+  align-items: center;
+}
+
+.navBarList li {
+  position: relative;
+  margin: 0 0.3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-white);
+  padding: 0.9rem;
+}
+
+.navBarList li:hover {
+  color: var(--clr-very-dark-blue);
+}
+
+.navBarList li::before {
+  content: '';
+  position: absolute;
+  height: 0.01rem;
+  width: 70%;
+  border: 2px solid;
+  border-radius: 0.2rem;
+  transform: translateX(50%);
+  bottom: 0;
+  left: -20px;
+  background-color: var(--clr-white);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--clr-white);
+}
+
+.navBarList li:hover::before {
+  opacity: 1;
+  color: var(--clr-very-dark-blue);
+  background-color: var(--clr-very-dark-blue);
+}
+
+section {
+  position: relative;
+  top: 40%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 2.5rem;
+}
+
+.content {
+  width: 75%;
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 1rem auto;
+  line-height: 2rem;
+}
+
+.startBtn,
+.leanMoreBtn {
+  width: 10rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  border: none;
+  margin: 0 1rem;
+  border-radius: 0.4rem;
+  background-color: var(--clr-white);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.startBtn:hover {
+  background-color: var(--clr-text-color);
+  color: var(--clr-white);
+}
+
+.leanMoreBtn {
+  background-color: var(--clr-text-color);
+  color: var(--clr-white);
+}
+
+.leanMoreBtn:hover {
+  background-color: var(--clr-white);
+  color: var(--clr-text-color);
+}
